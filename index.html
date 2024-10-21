@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Coding Community</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/framer-motion@4.1.17/dist/framer-motion.umd.js"></script>
+    <script defer src="scripts.js"></script>
+</head>
+<body class="bg-dark text-white font-sans">
+
+    <header class="bg-primary p-4 text-center">
+        <h1 class="text-4xl font-bold animate-bounce">Welcome to Professional Coding Community</h1>
+        <p class="text-lg mt-2">Where coders meet and share their journey.</p>
+    </header>
+
+    <section class="mt-10 p-6 text-center">
+        <motion.div 
+          class="bg-accent p-10 rounded-lg shadow-lg text-dark mx-auto w-11/12 md:w-8/12"
+          animate="visible"
+          initial="hidden"
+          variants="cardAnimation">
+            <h2 class="text-3xl font-semibold mb-4">Why Join Us?</h2>
+            <p>Expand your skills with the best in the industry. Collaborate on real-world projects and grow your portfolio.</p>
+        </motion.div>
+    </section>
+
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-8 p-6 mt-10 text-center">
+        <motion.div 
+          class="bg-secondary p-6 rounded-lg shadow-lg text-dark"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}>
+            <h3 class="text-2xl font-semibold mb-2">Expert Community</h3>
+            <p>Collaborate with industry experts to level up your coding skills.</p>
+        </motion.div>
+
+        <motion.div 
+          class="bg-primary p-6 rounded-lg shadow-lg text-white"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}>
+            <h3 class="text-2xl font-semibold mb-2">Resources & Guides</h3>
+            <p>Get access to the best resources and guides curated by professionals.</p>
+        </motion.div>
+
+        <motion.div 
+          class="bg-accent p-6 rounded-lg shadow-lg text-dark"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}>
+            <h3 class="text-2xl font-semibold mb-2">Career Growth</h3>
+            <p>Receive mentorship and grow your career in the tech industry.</p>
+        </motion.div>
+    </section>
+
+    <footer class="bg-dark p-6 text-center mt-12">
+        <p>&copy; 2024 Professional Coding Community. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
