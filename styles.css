@@ -2,39 +2,74 @@
 @tailwind components;
 @tailwind utilities;
 
+/* General body styling */
 body {
     font-family: 'Poppins', sans-serif;
 }
 
-h1 {
-    animation: bounce 2s infinite;
+/* Gradient background for the dark theme */
+.bg-dark-gradient {
+    background: linear-gradient(135deg, #1e1e2f, #0d0d15);
 }
 
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
+/* Glass effect styling */
+.glass {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    transition: all 0.3s ease-in-out;
 }
 
+/* Custom colors */
 .bg-dark {
-    background-color: #2B2D42;
+    background-color: #121212;
 }
 
 .bg-primary {
-    background-color: #FF6363;
+    background-color: #536DFE; /* Blue */
 }
 
 .bg-secondary {
-    background-color: #FFE162;
+    background-color: #FF4081; /* Pink */
 }
 
 .bg-accent {
-    background-color: #6D83F2;
+    background-color: #64FFDA; /* Teal */
 }
 
 .text-dark {
-    color: #2B2D42;
+    color: #121212;
+}
+
+/* Add animations */
+@keyframes slide-in {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-slide-in {
+    animation: slide-in 1s ease-out;
+}
+
+/* Layout adjustments */
+.grid {
+    display: grid;
+    grid-gap: 16px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
