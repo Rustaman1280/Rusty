@@ -1,5 +1,6 @@
 const { motion } = window['framer-motion'];
 
+// Define card animation for Framer Motion
 const cardAnimation = {
     hidden: { opacity: 0, scale: 0.9 },
     visible: {
@@ -9,10 +10,11 @@ const cardAnimation = {
     }
 };
 
+// Initialize animations on page load
 document.addEventListener('DOMContentLoaded', () => {
-    // You can apply animations here as per Framer Motion requirements
+    // Example: Additional Framer Motion animation can be added here
     motion.div({
-        animate: { scale: 1.2 },
-        transition: { duration: 0.5 },
+        animate: { opacity: 1, scale: 1.1 },
+        transition: { duration: 0.3 },
     });
 });
