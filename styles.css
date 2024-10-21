@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.bg-dark {
+    background-color: #2B2D42;
+}
+
+.bg-primary {
+    background-color: #FF6363;
+}
+
+.bg-secondary {
+    background-color: #FFE162;
+}
+
+.bg-accent {
+    background-color: #6D83F2;
+}
+
+.text-dark {
+    color: #2B2D42;
+}
