@@ -1,68 +1,232 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Coding Community</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/framer-motion@4.1.17/dist/framer-motion.umd.js"></script>
-    <script defer src="scripts.js"></script>
+    <title>Maintenance - IT Club</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+        body {
+            min-height: 100vh;
+            background: #0a1a2d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .cyber-grid {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(42, 171, 228, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(42, 171, 228, 0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+            animation: gridScroll 100s linear infinite;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(10, 26, 45, 0.95);
+            border-radius: 12px;
+            border: 2px solid #2AABE4;
+            box-shadow: 0 0 25px rgba(42, 171, 228, 0.3);
+            max-width: 380px;
+            width: 85%;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #2AABE4;
+            font-size: 1.6em;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 8px rgba(42, 171, 228, 0.3);
+            line-height: 1.3;
+        }
+
+        .cyber-icon {
+            font-size: 2.8em;
+            color: #ffffff;
+            margin: 12px 0;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        p {
+            color: #ffffff;
+            font-size: 0.95em;
+            margin: 12px 0;
+            line-height: 1.4;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            width: 75%;
+            height: 100%;
+            background: linear-gradient(90deg, #1a4b6e, #2AABE4);
+            border-radius: 6px;
+            animation: progressGlow 2s infinite alternate;
+        }
+
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .social-link {
+            color: #ffffff;
+            font-size: 1.4em;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-link:hover {
+            color: #2AABE4;
+            transform: scale(1.15);
+        }
+
+        .floating-icons span {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.25);
+            font-size: 1.1em;
+            animation: float 6s infinite linear;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 1.2rem;
+                width: 90%;
+                margin: 15px;
+                max-width: 320px;
+            }
+
+            h1 {
+                font-size: 1.4em;
+            }
+
+            .cyber-icon {
+                font-size: 2.2em;
+            }
+
+            p {
+                font-size: 0.85em;
+            }
+
+            .progress-bar {
+                height: 10px;
+                margin: 15px 0;
+            }
+
+            .social-link {
+                font-size: 1.2em;
+            }
+        }
+
+        @keyframes gridScroll {
+            from { background-position: 0 0; }
+            to { background-position: 30px 30px; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-12px) rotate(5deg); }
+        }
+
+        @keyframes progressGlow {
+            from { box-shadow: 0 0 6px #1a4b6e; }
+            to { box-shadow: 0 0 12px #2AABE4; }
+        }
+    </style>
 </head>
-<body class="bg-dark-gradient text-white">
+<body>
+    <div class="cyber-grid"></div>
+    
+    <div class="floating-icons">
+        <span>💻</span>
+        <span>🔌</span>
+        <span>🖥️</span>
+        <span>📱</span>
+        <span>💾</span>
+        <span>📡</span>
+    </div>
 
-    <!-- Header Section -->
-    <header class="glass p-6 text-center">
-        <h1 class="text-5xl font-extrabold animate-slide-in">Professional Coding Community</h1>
-        <p class="text-lg mt-2">The hub for coders, developers, and innovators.</p>
-        <img src="coding_community_banner.png" alt="Coding Community" class="mx-auto mt-6 rounded-lg shadow-lg">
-    </header>
+    <div class="container">
+        <div class="cyber-icon">⚙️</div>
+        <h1>WEBSITE DALAM PERBAIKAN</h1>
+        
+        <p>🛠️ Tim IT Club sedang meningkatkan performa sistem!</p>
+        
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
 
-    <!-- Introduction Section -->
-    <section class="mt-16 p-8 text-center">
-        <motion.div 
-          class="glass p-10 rounded-lg shadow-lg mx-auto w-11/12 md:w-8/12"
-          animate="visible"
-          initial="hidden"
-          variants="cardAnimation">
-            <h2 class="text-4xl font-semibold mb-4">Why Join Us?</h2>
-            <p class="text-lg">Expand your skills with professionals, collaborate on projects, and grow your portfolio. We're here to guide your tech career to success.</p>
-        </motion.div>
-    </section>
+        <p>⏱️ Estimasi waktu: <span id="countdown">00:25:00</span></p>
+        
+        <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+        </div>
+    </div>
 
-    <!-- Features Section -->
-    <section class="grid grid-cols-1 md:grid-cols-3 gap-8 p-6 mt-12 text-center">
-        <motion.div 
-          class="glass p-8 rounded-lg shadow-lg"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}>
-            <img src="expert_community.png" alt="Expert Community" class="mx-auto mb-4 w-16 h-16">
-            <h3 class="text-2xl font-semibold mb-2">Expert Community</h3>
-            <p>Work with industry experts to hone your skills in real-world projects.</p>
-        </motion.div>
+    <script>
+        let countdown = 25 * 60;
+        const countdownElement = document.getElementById('countdown');
 
-        <motion.div 
-          class="glass p-8 rounded-lg shadow-lg"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}>
-            <img src="resources.png" alt="Resources" class="mx-auto mb-4 w-16 h-16">
-            <h3 class="text-2xl font-semibold mb-2">Resources & Guides</h3>
-            <p>Access a curated collection of the latest coding resources and tutorials.</p>
-        </motion.div>
+        function updateCountdown() {
+            const minutes = Math.floor(countdown / 60);
+            const seconds = countdown % 60;
+            countdownElement.innerHTML = 
+                `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            
+            if(countdown <= 0) {
+                clearInterval(timer);
+                countdownElement.innerHTML = "HAMPIR SELESAI!";
+            }
+            countdown--;
+        }
 
-        <motion.div 
-          class="glass p-8 rounded-lg shadow-lg"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}>
-            <img src="career_growth.png" alt="Career Growth" class="mx-auto mb-4 w-16 h-16">
-            <h3 class="text-2xl font-semibold mb-2">Career Growth</h3>
-            <p>Get mentorship from professionals to build a successful coding career.</p>
-        </motion.div>
-    </section>
+        const timer = setInterval(updateCountdown, 1000);
 
-    <!-- Footer Section -->
-    <footer class="bg-dark p-6 text-center mt-12 glass">
-        <p>&copy; 2024 Professional Coding Community. All rights reserved.</p>
-    </footer>
+        function createFloatingParticles() {
+            const container = document.querySelector('.floating-icons');
+            const emojis = ['🔋', '💿', '📶', '🖨️', '⌚', '🖱️'];
+            
+            for(let i = 0; i < 8; i++) {
+                const particle = document.createElement('span');
+                particle.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDuration = (4 + Math.random() * 4) + 's';
+                particle.style.animationDelay = Math.random() * 2 + 's';
+                container.appendChild(particle);
+            }
+        }
 
+        createFloatingParticles();
+    </script>
 </body>
 </html>
